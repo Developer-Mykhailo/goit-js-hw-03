@@ -4,6 +4,8 @@ function makeArray(firstArray, secondArray, maxLength) {
 
   if (arr.length >= maxLength) {
     newArr = arr.slice(0, maxLength);
+  } else {
+    return arr;
   }
 
   return newArr;
@@ -15,5 +17,6 @@ console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); //
 console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
 console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
 console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 6)); // []
 
 console.log("");
